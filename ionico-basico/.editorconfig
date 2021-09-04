@@ -1,0 +1,16 @@
+# Configuración del editor, consulte https://editorconfig.org
+root = verdadero
+
+[ * ]
+juego de caracteres = utf-8
+sangría_estilo = espacio
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = verdadero
+
+[ * .ts ]
+quote_type = single
+
+[ * .md ]
+max_line_length = desactivado
+trim_trailing_whitespace = falso

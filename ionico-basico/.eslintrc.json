@@ -1,0 +1,48 @@
+  
+{
+  "root" : verdadero ,
+  "ignorePatterns" : [ "proyectos / ** / *" ] ,
+  "anula" : [
+    {
+      "archivos" : [ "* .ts" ] ,
+      "parserOptions" : {
+        "proyecto" : [ "tsconfig.json" ,  "e2e / tsconfig.json" ] ,
+        "createDefaultProgram" : verdadero
+      } ,
+      "extiende" : [
+        "complemento: @ angular-eslint / ng-cli-compat" ,
+        "complemento: @ angular-eslint / ng-cli-compat - complemento de formato" ,
+        "complemento: @ angular-eslint / template / process-inline-templates"
+      ] ,
+      "reglas" : {
+        "@ angular-eslint / componente-clase-sufijo" : [
+          "error" ,
+          {
+            "sufijos" : [ "Página" ,  "Componente" ]
+          }
+        ] ,
+        "@ angular-eslint / selector-de-componentes" : [
+          "error" ,
+          {
+            "tipo" : "elemento" ,
+            "prefijo" : "aplicación" ,
+            "estilo" : "estuche de kebab"
+          }
+        ] ,
+        "@ angular-eslint / directive-selector" : [
+          "error" ,
+          {
+            "tipo" : "atributo" ,
+            "prefijo" : "aplicación" ,
+            "style" : "camelCase"
+          }
+        ]
+      }
+    } ,
+    {
+      "archivos" : [ "* .html" ] ,
+      "extiende" : [ "complemento: @ angular-eslint / template / recommended" ] ,
+      "reglas" : { }
+    }
+  ]
+}
